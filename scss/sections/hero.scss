@@ -1,0 +1,103 @@
+.hero {
+    background-image: url('../img/hero/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+  }
+  .container_hero {
+    justify-content: flex-start;
+  }
+  .header {
+    width: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .header__menu {
+     flex-grow: 1;
+  }
+  
+ 
+  .nav__list {
+    text-align: right;
+    font-size: 0;
+    white-space: nowrap;
+    
+  }
+  
+  .nav__item {
+    display: inline-flex;
+    align-items: center;        
+    &:after {     
+      content: '';
+      @include circle(5px, #fff);
+      margin: 0 12px;
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+  
+  .nav__link {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;      
+    text-transform: uppercase;
+    text-decoration: none;  
+    transition: .5s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .header__order {
+    margin-left: 15px;
+    display: flex;
+  }
+  
+    
+    
+  .hero__content {
+    width: 100%;
+    display: flex;
+    align-items: center;   
+  }
+
+  
+  .hero__img, .hero__description {
+    display: flex;
+    flex-basis: 50%;
+  }
+  .hero__img-pic {
+    max-width: 100%;
+  }
+  
+  .hero__description {
+    padding-top: rem(35px);
+    flex-direction: column;    
+  }
+  
+  .section__title {
+    text-align: left;
+    color: #f9b43b;
+    font-family: 'Gagalin';
+    font-size: 72px;    
+  }
+  
+  .hero__description-text {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Lifehack';
+    font-size: 65px;
+    line-height: 1;
+
+  }
+  .down-arrow {
+    display: inline-flex;
+    position: absolute;
+    bottom: 40px;
+
+  }
