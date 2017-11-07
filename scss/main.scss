@@ -1,13 +1,31 @@
+//colors
+$orange: #e25028;
+$yellow: #f8b43a;
+$green: #8ac03e;
+$dark: #2f3234;
+
+//resolutions
+$tablets: 768px;
+$phones: 480px;
+
+
+//media
+@import "./config/media";
+
 //config
 @import "./config/variables";
 @import "./config/mixins";
 
 //base
 @import "./layout/fonts";
-@import "./layout/base";
-@import "./layout/adjustment";
+@import "./layout/layout";
+@import "./layout/common";
 
 // //sections
 @import "./sections/hero";
 @import "./sections/best";
 @import "./sections/reviews";
+@import "./sections/team";
+@import "./sections/menu";
+@import "./sections/order";
+@import "./sections/contacts";

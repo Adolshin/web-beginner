@@ -1,0 +1,117 @@
+.team   {
+    background-image: url('../img/team/team-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+   
+}
+.team__container{
+    position: absolute;
+    background-color: rgba(#2f3234, .93);
+    top: 0;
+    left:50%;
+    right: 0;
+    bottom: 0;
+    padding: rem(80px) 0 0  rem(80px);
+    transition: .8s;
+    @include large {
+        padding-left: rem(40px);
+    }
+    @include tablets {
+        left: 0;  
+        padding-left:0;
+        display: flex;
+        justify-content: center;   
+    }
+    
+
+}
+.team__content {
+max-width: rem(400px);    
+}
+.section__title_team {
+    margin-bottom:rem(80px);
+}
+.team-acco__item {
+    margin-bottom: rem(30px); 
+    font-size: rem(14px); 
+}
+.team-acco__item_active {
+    .team-acco__trigger {
+        color:$yellow;
+        &:before {
+            transform: rotate(180deg)
+        }
+    }
+    .team-acco__content {
+        display: flex;
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+        }
+    }   
+}
+.team-acco__trigger {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-family: "gagalin";   
+    margin-bottom: rem(15px);
+    text-transform: uppercase;    
+    &:before {
+        content: "";
+        height: 0;
+        width: 0;
+        border: solid transparent;
+        border-top-color: $yellow;
+        border-width: rem(7px) rem(4.5px) 0 rem(4.5px);
+        margin-right: rem(10px);
+    }
+    @include tablets {
+        justify-content: center;
+    }
+}
+.team-acco__content {
+    display: none;
+}
+.team__img {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: rem(100px);
+    height: rem(100px);
+    flex-shrink: 0;
+    border-radius: 50%; 
+    overflow: hidden;
+    margin-left: rem(15px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @include tablets {
+       margin-left: 0;
+       margin-bottom: rem(10px);       
+    }
+
+}
+// .team__img-pic {
+//     max-width: 100%;
+// }
+.team-acco__text {
+    font-family: "ubuntu";   
+    color: #fff;  
+    margin: 0 rem(15px);
+    @include tablets {
+        text-align: center;       
+    }
+
+}
+.team-acco__text-title {
+    font-weight: 700;
+    margin-bottom:  rem(15px);
+}
+.team-acco__text-content {
+    font-weight: 300;
+}
