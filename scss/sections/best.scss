@@ -47,16 +47,21 @@
     width: rem(100px);
     height: rem(100px);
 }
+.best__content {
+    width: 100%;
+}
 
 .best__item h4 {
     font-family: 'lifehack';
     font-size: rem(24px);
     margin-top: rem(30px);
     line-height: 1.15;
+    width: 100%;
 }
 
 .best__item p {
     font-size: rem(14px);
     font-weight: 300;
     margin-top: rem(30px);
+    width: 100%;
 }

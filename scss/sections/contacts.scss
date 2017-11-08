@@ -61,6 +61,8 @@
 }
 
 .adress_phone-number {
+    display: block;
+    text-decoration: none;
     font-size: rem(14px);
     font-weight: 900;
     color: $orange;

@@ -61,8 +61,10 @@ max-width: rem(400px);
     font-family: "gagalin";   
     margin-bottom: rem(15px);
     text-transform: uppercase;    
+    transition: .3s;
     &:before {
         content: "";
+        display: inline-block;
         height: 0;
         width: 0;
         border: solid transparent;

@@ -14,6 +14,11 @@
   align-items: center;
   padding-top: rem(10px);
 }
+.logo {
+  display: block;
+  width: rem(100px);
+  height: rem(80px);
+}
 
 .logo__img {
   max-width: 100%;
@@ -36,6 +41,7 @@
   display: inline-flex;
   align-items: center;
   &:after {
+    display: block;
     content: '';
     @include circle(rem(5px),
     #fff);
@@ -54,7 +60,7 @@
   text-decoration: none;
   transition: .5s;
   &:hover {
-    text-decoration: underline;
+    color:$yellow;
   }
 }
 
@@ -63,7 +69,7 @@
   display: flex;
   justify-content: flex-end;
   @include tablets {
-   flex:1;
+    flex: 1;
   }
 }
 
@@ -112,12 +118,15 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding-bottom: rem(200px);
-  height: 100%;  
+  padding-bottom: rem(100px);
+  height: 100%;
   @include tablets {
     flex-direction: column;
-    justify-content: center;    
-    
+    justify-content: flex-start;
+    padding-bottom: 0;    
+  }
+  @include middle {
+  justify-content: center;    
   }
 }
 
@@ -126,23 +135,22 @@
   width: 50%;
   transition: .5s;
   @include tablets {
-    width: rem(400px);
+    width: rem(380px);
   }
 }
 
 .hero__img-pic {
   max-width: 100%;
-  
 }
 
 .hero__description {
   display: flex;
   padding-top: rem(35px);
-  flex-direction: column; 
-  
+  flex-direction: column;
   @include tablets {
-    padding-top:0;
-  }  
+    padding-top: 0;
+    
+  }
 }
 
 .section__title {
@@ -151,9 +159,9 @@
   color: #f9b43b;
   font-family: 'Gagalin';
   font-size: rem(72px);
-  
   @include tablets {
     text-align: center;
+    font-size: rem(62px);
   }
 }
 
@@ -165,13 +173,13 @@
   line-height: 1;
   @include tablets {
     text-align: center;
+    font-size: rem(55px);
   }
 }
 
 .down-arrow {
   display: block;
-  padding-bottom: rem(40px);
-  // position: absolute;
+  padding-bottom: rem(40px); // position: absolute;
   // bottom: rem(40px);
 }
 

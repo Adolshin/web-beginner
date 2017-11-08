@@ -16,17 +16,23 @@
     }
   }
   @mixin middle {
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 380px) {
       @content;
     }
   }
   @mixin small {
-    @media screen and (max-width: 310px) {
+    @media screen and (max-width: 365px) {
       @content;
     }
   }
   @mixin little {
-    @media screen and (max-width: 240px) {
+    @media screen and (max-width: 325px) {
       @content;
     }
   }
+  @mixin mini {
+    @media screen and (max-width: 260px) {
+      @content;
+    }
+  }
+

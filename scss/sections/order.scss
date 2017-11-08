@@ -8,6 +8,8 @@
 }
 
 .section__title_order {
+    width: 100%;
+    text-align: center;
     padding-bottom: rem(80px);
     white-space: normal;
     line-height: 1.15;
@@ -17,7 +19,7 @@
 }
 
 .form {
-    // width: 100%;
+    width: 100%;   
     padding-bottom: rem(100px);
     font-size: rem(14px);
     color: #fff;
@@ -27,6 +29,7 @@
 }
 
 .form__container {
+    
     display: flex;
     @include tablets {
         flex-direction: column;
@@ -122,6 +125,7 @@
 }
 
 .form__radio-input {
+    
     position: absolute;
     top: 0;
     left: rem(-9999px);
@@ -132,6 +136,7 @@
 }
 
 .form__radio-img {
+    flex-shrink: 0;
     width: rem(16px);
     height: rem(16px);
     margin-right: rem(10px);
