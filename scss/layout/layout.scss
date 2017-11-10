@@ -40,6 +40,7 @@ body {
   color: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
 }
 
 .wrapper {
@@ -53,6 +54,9 @@ body {
   height: 100%;
   width: 100%;
   min-height: 650px;
+  @include phones {
+    min-height: 500px;
+  }
 }
 
 .container {
@@ -109,4 +113,10 @@ p {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+svg, a {
+  display: block;
+}
+a {
+  text-decoration: none;
 }

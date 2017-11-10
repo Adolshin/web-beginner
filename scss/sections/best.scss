@@ -7,7 +7,10 @@
 
 .section__title_best {
     color: $dark;
-    margin-bottom: rem(80px);
+    margin-bottom: rem(50px);
+    @include phones {
+        margin-bottom: 0;
+    }
 }
 
 .best__list {
@@ -17,6 +20,7 @@
     width: 100%;
     @include phones {
         flex-direction: column;
+        padding-bottom: 0;
     }
 }
 

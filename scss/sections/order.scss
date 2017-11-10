@@ -4,7 +4,7 @@
     background-position: center center;
     background-size: cover;
     position: relative;
-    display: flex;
+    
 }
 
 .section__title_order {
@@ -14,7 +14,10 @@
     white-space: normal;
     line-height: 1.15;
     @include tablets {
-        padding-bottom: rem(40px);
+        padding-bottom: rem(20px);
+    }
+    @include phones {
+        padding-bottom: rem(10px);
     }
 }
 
@@ -24,7 +27,11 @@
     font-size: rem(14px);
     color: #fff;
     @include tablets {
-        padding-bottom: rem(50px);
+        padding-bottom:0;
+        
+    }
+    @include phones {
+        padding-bottom: 0;
     }
 }
 
@@ -41,7 +48,7 @@
     width: 50%;
     margin-right: rem(20px);
     &:last-child {
-        margin-right: 0;
+        // margin-right: 0;
     }
     @include tablets {
         margin-right: 0;

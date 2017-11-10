@@ -177,14 +177,8 @@
   }
 }
 
-.down-arrow {
+.arrow-down {
   display: block;
-  padding-bottom: rem(40px); // position: absolute;
-  // bottom: rem(40px);
+  padding-bottom: rem(40px); 
 }
 
-.down-arrow__img {
-  width: rem(30px);
-  height: rem(15px);
-  fill: #fff;
-}
