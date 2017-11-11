@@ -14,7 +14,9 @@
   align-items: center;
   padding-top: rem(10px);
 }
+
 .logo {
+  flex-shrink: 0;
   display: block;
   width: rem(100px);
   height: rem(80px);
@@ -22,10 +24,11 @@
 
 .logo__img {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .header__menu {
-  flex-grow: 1;
+  margin-left: auto;
   @include tablets {
     display: none;
   }
@@ -60,7 +63,7 @@
   text-decoration: none;
   transition: .5s;
   &:hover {
-    color:$yellow;
+    color: $yellow;
   }
 }
 
@@ -115,19 +118,15 @@
 }
 
 .hero__content {
-  width: 100%;
   display: flex;
   align-items: center;
   padding-bottom: rem(100px);
-  height: 100%;
   @include tablets {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-bottom: 0;    
+    display: block;
+    padding-bottom: 0;
+    margin: 0 auto;
   }
-  @include middle {
-  justify-content: center;    
-  }
+ 
 }
 
 .hero__img,
@@ -135,10 +134,16 @@
   width: 50%;
   transition: .5s;
   @include tablets {
-    width: rem(380px);
+    width: rem(420px);
+  }
+  @include phones {
+    width: rem(350px);
   }
 }
 
+// .hero__img {
+//   height: auto;
+// }
 .hero__img-pic {
   max-width: 100%;
 }
@@ -149,7 +154,6 @@
   flex-direction: column;
   @include tablets {
     padding-top: 0;
-    
   }
 }
 
@@ -179,6 +183,5 @@
 
 .arrow-down {
   display: block;
-  padding-bottom: rem(40px); 
+  padding-bottom: rem(40px);
 }
-

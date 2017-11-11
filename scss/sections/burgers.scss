@@ -29,13 +29,13 @@
     justify-content: center;
     @include tablets {
         align-items: flex-end;
-        width: 80%;
+        width: 60%;
         height:rem(370px);
         margin-right: 0;
-        padding: 0 5%;      
+        padding: 0 2%;      
     }
     @include phones {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -51,7 +51,7 @@
 }
 
 .burgers__img-pic {
-    max-width: 100%;
+    width: 100%;
 }
 
 .burgers__consist {
@@ -136,8 +136,8 @@
     color: #fff;
     font-weight: 300;
     @include tablets {
-        left: initial;
-        bottom: initial;
+        left: auto;
+        bottom: auto;
         top:0;
         right: 0;
     }
@@ -149,11 +149,12 @@
 }
 
 .burgers__value-quantity {
+    width: 100%;
     font-size: rem(20px);
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-46%, -50%);
+    transform: translate(-48%, -50%);
     text-align: center;
 }
 
