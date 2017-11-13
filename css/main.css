@@ -83,7 +83,7 @@ body {
 .maincontent {
   height: 100%;
   width: 100%;
-  min-height: 760px; }
+  min-height: 650px; }
 
 .container {
   position: relative;
@@ -113,7 +113,7 @@ body {
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.31);
-  min-height: 760px; }
+  min-height: 650px; }
   @media screen and (max-width: 480px) {
     .section {
       min-height: 630px; } }
@@ -174,7 +174,9 @@ a {
   text-transform: uppercase;
   -webkit-transition: .5s;
   -o-transition: .5s;
-  transition: .5s; }
+  transition: .5s;
+  -webkit-box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;
+  box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px; }
   .order-btn:hover {
     background-color: #b43a18; }
 
@@ -395,7 +397,7 @@ a {
   @media screen and (max-width: 768px) {
     .hero__img,
     .hero__description {
-      width: 27.5rem; } }
+      width: 25rem; } }
   @media screen and (max-width: 480px) {
     .hero__img,
     .hero__description {
@@ -403,7 +405,7 @@ a {
   @media screen and (max-width: 365px) {
     .hero__img,
     .hero__description {
-      width: 21.25rem; } }
+      width: 22.5rem; } }
 
 .hero__img-pic {
   max-width: 100%; }

@@ -55,7 +55,7 @@ body {
 .maincontent {
   height: 100%;
   width: 100%;
-  min-height: 760px;
+  min-height: 650px;
   
 }
 
@@ -75,7 +75,7 @@ body {
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.31);
-  min-height: 760px;
+  min-height: 650px;
   @include phones {
     min-height: 630px;
   }

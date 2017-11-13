@@ -106,13 +106,13 @@
   width: 50%;
   transition: .5s;
   @include tablets {
-    width: rem(440px);
+    width: rem(400px);
   }
   @include phones {
     width: rem(380px);
   }
   @include small {
-    width: rem(340px);
+    width: rem(360px);
   }
 }
 
