@@ -98,7 +98,11 @@
     text-transform: uppercase;
     font-weight: 500;
     line-height: 1;
-    min-width: rem(120px);
+    box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;
+    // min-width: rem(120px);
+    @include phones {            
+        min-width: rem(120px);
+    }
     
     &:after {
         content: "ЧИТАТЬ ОТЗЫВ";
@@ -112,8 +116,8 @@
         border-radius: rem(5px);
         white-space: nowrap;
         opacity: 0;
-       
-        @include phones {
+        box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;      
+        @include phones {            
             opacity: 1;
         }
     }
