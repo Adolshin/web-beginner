@@ -17,7 +17,6 @@
 .burgers__img,
 .burgers__description {
     width: 50%;
-   
 }
 
 .burgers__img {
@@ -30,9 +29,9 @@
     @include tablets {
         align-items: flex-end;
         width: 60%;
-        height:rem(370px);
+        height: rem(370px);
         margin-right: 0;
-        padding: 0 2%;      
+        padding: 0 2%;
     }
     @include phones {
         width: 90%;
@@ -42,7 +41,6 @@
 .burgers__description {
     display: flex;
     flex-direction: column;
-  
     @include tablets {
         text-align: center;
         align-items: center;
@@ -55,6 +53,7 @@
 }
 
 .burgers__consist {
+    box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;
     font-size: rem(14px);
     display: block;
     text-decoration: none;
@@ -69,12 +68,14 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    &:hover {
-        .burgers__consist-popup {
-            left: rem(90px);
-            opacity: 1;
-            top: 0;
-        }
+    cursor: pointer;
+}
+
+.burgers__consist_active {
+    background-color: $orange; 
+    box-shadow: none;
+    .burgers__consist-img, .burgers__consist-title {
+        transform: translate(.4px, .4px);
     }
 }
 
@@ -88,6 +89,7 @@
 .burgers__consist-title {
     font-family: 'gagalin';
     color: #fff;
+    user-select: none;
 }
 
 .burgers__consist-popup {
@@ -95,11 +97,18 @@
     left: -9999px;
     top: 0;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity .5s;
     background-color: #fff;
     width: rem(270px);
     border-radius: rem(10px);
     padding: rem(20px) rem(25px);
+    user-select: none;
+}
+
+.burgers__consist-popup_open {
+    left: rem(90px);
+    opacity: 1;
+    top: 0;
 }
 
 .burgers__consist-popup-item {
@@ -138,7 +147,7 @@
     @include tablets {
         left: auto;
         bottom: auto;
-        top:0;
+        top: 0;
         right: 0;
     }
 }
@@ -174,7 +183,6 @@
     span {
         white-space: nowrap;
     }
-  
 }
 
 .burgers__text {
@@ -183,7 +191,6 @@
     font-weight: 300;
     margin-bottom: rem(30px);
     font-size: rem(14px);
-   
 }
 
 .burgers__order {

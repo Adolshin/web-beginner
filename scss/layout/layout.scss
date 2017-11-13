@@ -17,12 +17,12 @@ html {
   @include small {
     font-size: .75rem;
   }
-  @include little {
-    font-size: .65rem;
-  }
-  @include mini {
-    font-size: .3rem;
-  }
+  // @include little {
+  //   font-size: .65rem;
+  // }
+  // @include mini {
+  //   font-size: .3rem;
+  // }
   
 }
 
@@ -30,6 +30,7 @@ html {
 body,
 html {
   height: 100%;
+ 
 }
 
 body {
@@ -44,16 +45,17 @@ body {
 }
 
 .wrapper {
-  width: 100%; // min-width: rem960px;
+  width: 100%; 
   min-height: 100%;
   position: relative;
   overflow: hidden;
+  min-width: 320px;
 }
 
 .maincontent {
   height: 100%;
   width: 100%;
-  min-height: 650px;
+  min-height: 760px;
   
 }
 
@@ -73,7 +75,7 @@ body {
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.31);
-  min-height: 650px;
+  min-height: 760px;
   @include phones {
     min-height: 630px;
   }

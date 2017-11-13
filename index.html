@@ -8,14 +8,13 @@
     <title>Бургерная</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./js/svg4everybody.js"></script>
     <script>
         svg4everybody();
     </script>
-   
 </head>
-
-<body>
+<body>       
     <div class="wrapper">
         <div class="maincontent">
             <section class="section hero">
@@ -30,7 +29,7 @@
                             <nav class="nav">
                                 <ul class="nav__list">
                                     <li class="nav__item">
-                                        <a href="" class="nav__link">о нас</a>
+                                        <a href="#" class="nav__link">о нас</a>
                                     </li>
                                     <li class="nav__item">
                                         <a href="#" class="nav__link">бургеры</a>
@@ -53,9 +52,11 @@
                         <div class="header__order">
                             <a href="#" class="order-btn">заказать</a>
                         </div>
-                        <a href="" class="hamburger-menu-link">
-                            <div class="hamburger-menu-link__bars"></div>
-                        </a>
+                        <div class="hamburger-menu" id="toggle">
+                            <div class="hamburger-menu__item hamburger-menu__item_top"></div>
+                            <div class="hamburger-menu__item hamburger-menu__item_middle"></div>
+                            <div class="hamburger-menu__item hamburger-menu__item_bottom"></div>
+                        </div>
                     </header>
                     <div class="hero_content-wrap">
                         <div class="hero__content">
@@ -124,12 +125,12 @@
                     <div class="burgers__content">
                         <div class="burgers__img">
                             <img src="./img/burgers/burger.png" alt="" class="burgers__img-pic">
-                            <a href="#" class="burgers__consist">
+                            <div class="burgers__consist" id="consist">
                                 <svg class="burgers__consist-img">
                                     <use xlink:href="./img/sprite/sprite.svg#burger"></use>
                                 </svg>
                                 <div class="burgers__consist-title">состав</div>
-                                <ul class="burgers__consist-popup">
+                                <ul class="burgers__consist-popup" id="consist-popup">
                                     <li class="burgers__consist-popup-item">
                                         <div class="burgers__consist-popup-pic">
                                             <svg class="burgers__consist-popup-img" style="fill: #e25028">
@@ -185,7 +186,8 @@
                                         <div class="burgers__consist-popup-weight">80 т</div>
                                     </li>
                                 </ul>
-                            </a>
+                            </div>
+                            
                             <div class="burgers__value">
                                 <svg class="burgers__value-img">
                                     <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
@@ -195,13 +197,16 @@
                             </div>
                         </div>
                         <div class="burgers__description">
-                            <div class="section__title section__title_burgers"><span>dark beef</span><br> burger</div>
+                            <div class="section__title section__title_burgers">
+                                <span>dark beef</span>
+                                <br> burger</div>
                             <div class="burgers__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего
                                 сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического
                                 соуса чураско.
                             </div>
                             <div class="burgers__order">
-                                <div class="burgers__order-price">500<span>рублей</span>
+                                <div class="burgers__order-price">500
+                                    <span>рублей</span>
                                 </div>
                                 <a href="#" class="order-btn">заказать</a>
                             </div>
@@ -581,6 +586,34 @@
             </ul>
         </div>
 
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <ul class="overlay-menu__list">
+                    <li class="overlay-menu__item">
+                        <a class="overlay-menu__link" href="#">о нас</a>
+                    </li>
+                    <li class="overlay-menu__item">
+                        <a class="overlay-menu__link" href="#">бургеры</a>
+                    </li>
+                    <li class="overlay-menu__item">
+                        <a class="overlay-menu__link" href="#">команда</a>
+                    </li>
+                    <li class="overlay-menu__item">
+                        <a class="overlay-menu__link" href="#">меню</a>
+                    </li>
+                    <li class="overlay-menu__item">
+                        <a class="overlay-menu__link" href="#">отзывы</a>
+                    </li>
+                    <li class="overlay-menu__item">
+                        <a class="overlay-menu__link" href="#">контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <script src="./js/burger-popup.js"></script>
+        <script src="./js/hamburger-menu.js"></script>
+        
 </body>
 
 </html>
