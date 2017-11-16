@@ -53,7 +53,7 @@
 }
 
 .burgers__consist {
-    box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;
+    box-shadow: inset rgba(255, 255, 255, 0.3) 2px 2px 4px 2px, inset rgba(0, 0, 0, 0.4) -2px -2px 4px 1px;
     font-size: rem(14px);
     display: block;
     text-decoration: none;
@@ -74,9 +74,9 @@
 
 .burgers__consist_active {
     background-color: $orange; 
-    box-shadow: none;
+    box-shadow: inset rgba(255, 255, 255, 0.2) -2px -2px 4px 1px, inset rgba(0, 0, 0, 0.5) 2px 2px 4px 1px;
     .burgers__consist-img, .burgers__consist-title {
-        transform: translate(.4px, .4px);
+        transform: translate(1px, 1px);        
     }
 }
 
@@ -104,6 +104,7 @@
     border-radius: rem(10px);
     padding: rem(20px) rem(25px);
     user-select: none;
+    box-shadow: rgba(0, 0, 0, .7) 8px 8px 14px 4px;
 }
 
 .burgers__consist-popup_open {

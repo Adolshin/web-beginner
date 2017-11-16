@@ -1,70 +1,95 @@
-.team   {
+.team {
     background-image: url('../img/team/team-bg.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;
-   
 }
-.team__container{
+
+.team__container {
     position: absolute;
     background-color: rgba(#2f3234, .93);
     top: 0;
-    left:50%;
+    left: 50%;
     right: 0;
     bottom: 0;
-    padding: rem(80px) 0 0  rem(80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
     transition: .8s;
     @include large {
-        padding-left: rem(40px);
+        left: 30%;
     }
     @include tablets {
-        left: 0;  
-        padding-left:0;
+        left: 0;
+        padding-left: 0;
         display: flex;
-        align-items: center;       
-        justify-content: center; 
+        align-items: center;
+        justify-content: center;
     }
 }
+
 .team__content {
-max-width: rem(400px); 
-@include tablets {
-    width: rem(400px);
+    width: 80%;
+    @include tablets {
+        width: 70%;
+    }
 }
 
-}
 .section__title_team {
-    margin-bottom:rem(80px);
+    margin-bottom: rem(50px);
 }
+
+.team-acco {
+    display: flex;
+    flex-direction: column;
+}
+
 .team-acco__item {
-    margin-bottom: rem(30px); 
-    font-size: rem(14px); 
+    margin-bottom: rem(30px);
+    font-size: rem(14px);
 }
+
 .team-acco__item_active {
     .team-acco__trigger {
-        color:$yellow;
+        box-shadow: inset rgba(255, 255, 255, 0.2) -1px -1px 2px 1px, inset rgba(0, 0, 0, 0.6) 1px 1px 2px 1px;
+        color: $yellow;
         &:before {
-            transform: rotate(180deg)
+            transform: rotate(180deg);
         }
     }
     .team-acco__content {
-        display: flex;
-        @include tablets {
-            flex-direction: column;
-            align-items: center;
+        transition-delay: .3s;
+        opacity: 1; // transition-delay: 5s;  
+        .team__img {
+            opacity: 1;
+            width: rem(100px);
+            height: rem(100px);
         }
-    }   
+        .team-acco__text {
+            opacity: 1;
+            font-size: rem(14px);
+            width: 70%;
+     @include tablets {
+         width: 90%;
+     }
+
+
+        }
+    }
 }
+
 .team-acco__trigger {
+    padding: rem(5px) rem(10px);
     display: flex;
     align-items: center;
     width: 100%;
     text-decoration: none;
     color: #fff;
-    font-family: "gagalin";   
+    font-family: "gagalin";
     margin-bottom: rem(15px);
-    text-transform: uppercase;    
-    transition: .3s;
+    text-transform: uppercase;
+    box-shadow: inset rgba(255, 255, 255, 0.2) 1px 1px 2px 1px, inset rgba(0, 0, 0, 0.6) -1px -1px 2px 1px;
     &:before {
         content: "";
         display: inline-block;
@@ -74,50 +99,63 @@ max-width: rem(400px);
         border-top-color: $yellow;
         border-width: rem(7px) rem(4.5px) 0 rem(4.5px);
         margin-right: rem(10px);
+        transition: .7s;
     }
     @include tablets {
         justify-content: center;
     }
 }
+
 .team-acco__content {
-    display: none;
+    opacity: 0;
+    transition: .7s;
+    display: flex;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
 .team__img {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    width: rem(100px);
-    height: rem(100px);
+    // opacity: 0;
+    width: 0;
+    height: 0;
+    transition: .7s;
     flex-shrink: 0;
-    border-radius: 50%; 
+    border-radius: 50%;
     overflow: hidden;
     margin-left: rem(15px);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     @include tablets {
-       margin-left: 0;
-       margin-bottom: rem(10px);       
+        margin-left: 0;
+        margin-bottom: rem(10px);
     }
-
 }
+
 // .team__img-pic {
 //     max-width: 100%;
 // }
 .team-acco__text {
-    width: 90%;
-    font-family: "ubuntu";   
-    color: #fff;  
-    margin: 0 rem(15px);
+    width: 0;
+    flex-shrink: 0; 
+    font-size: 0;
+    transition: .7s;
+    font-family: "ubuntu";
+    color: #fff;
+    margin-left: rem(15px);
     @include tablets {
-        text-align: center;       
+        text-align: center;
+        margin-left: 0;
     }
-
 }
+
 .team-acco__text-title {
     font-weight: 700;
-    margin-bottom:  rem(15px);
+    margin-bottom: rem(15px);
 }
+
 .team-acco__text-content {
     font-weight: 300;
 }

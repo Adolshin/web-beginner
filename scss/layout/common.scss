@@ -1,6 +1,5 @@
 .order-btn {
-  display: inline-block;
-  //  min-width: rem(98px);
+  display: inline-block; //  min-width: rem(98px);
   padding: rem(10px) rem(15px);
   border-radius: rem(5px);
   background-color: $orange;
@@ -11,7 +10,6 @@
   text-transform: uppercase;
   transition: .5s;
   box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;
-  
   &:hover {
     background-color: darken($orange, 12%);
   }
@@ -19,6 +17,7 @@
 
 .fixed-menu {
   position: fixed;
+  z-index: 20;
   right: 2%;
   top: rem(80px);
   @include tablets {
@@ -31,8 +30,8 @@
 }
 
 .fixed-menu__link {
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   display: block;
   position: relative;
   &:after {
@@ -48,13 +47,10 @@
     content: "";
     display: block;
     position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border: rem(1px) solid #fff;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     opacity: 0;
     transition: .5s;
   }
@@ -63,32 +59,46 @@
   }
 }
 
-.cross {
-  display: none;
-  position: absolute;
-  right: rem(30px);
-  top: rem(20px);
-  background: #fff;
-  height: rem(20px);
-  width: rem(4px);
-  border-radius: rem(2px);
-  transform: rotate(45deg);
-  @include phones {
-    display: block;
-  }
-  &:after {
-    background: #fff;
-    content: "";
-    height: rem(4px);
-    left: rem(-8px);
-    position: absolute;
-    top: rem(8px);
-    width: rem(20px);
-    border-radius: rem(2px);
-  }
-}
 .arrow__img {
   width: rem(30px);
   height: rem(15px);
   fill: #fff;
+}
+
+.cross {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  // z-index: 100;
+  opacity: 0.7;
+  @include phones {
+    display: flex;
+  }
+  .cross__item {
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    height: 4px;
+    width: 22px;
+    transition: all .35s ease;
+    cursor: pointer;
+    &.cross__item_top {
+      transform: translateY(225%) translateX(0) rotate(45deg);
+      border-radius: 4px;
+    }
+    &.cross__item_bottom {
+      transform: translateY(-225%) translateX(0) rotate(-45deg);
+      border-radius: 4px;
+    }
+  }
+}
+
+.cross_menu {
+  right: 20px;
+  top: 20px;
 }
