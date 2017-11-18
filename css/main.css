@@ -926,6 +926,7 @@ a {
   font-family: "gagalin";
   margin-bottom: 0.9375rem;
   text-transform: uppercase;
+  position: relative;
   -webkit-box-shadow: inset rgba(255, 255, 255, 0.2) 1px 1px 2px 1px, inset rgba(0, 0, 0, 0.6) -1px -1px 2px 1px;
   box-shadow: inset rgba(255, 255, 255, 0.2) 1px 1px 2px 1px, inset rgba(0, 0, 0, 0.6) -1px -1px 2px 1px; }
   .team-acco__trigger:before {
@@ -940,6 +941,13 @@ a {
     -webkit-transition: .7s;
     -o-transition: .7s;
     transition: .7s; }
+  .team-acco__trigger:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
   @media screen and (max-width: 768px) {
     .team-acco__trigger {
       -webkit-box-pack: center;

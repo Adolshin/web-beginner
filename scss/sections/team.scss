@@ -61,6 +61,7 @@
             display: block;
             transform: translate(1px, 1px);
         }
+     
         &:before {
             transform: rotate(180deg);
         }
@@ -102,7 +103,9 @@
     font-family: "gagalin";
     margin-bottom: rem(15px);
     text-transform: uppercase;
+    position: relative;
     box-shadow: inset rgba(255, 255, 255, 0.2) 1px 1px 2px 1px, inset rgba(0, 0, 0, 0.6) -1px -1px 2px 1px;
+  
     &:before {
         content: "";
         display: inline-block;
@@ -113,6 +116,14 @@
         border-width: rem(7px) rem(4.5px) 0 rem(4.5px);
         margin-right: rem(10px);
         transition: .7s;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
     }
     @include tablets {
         justify-content: center;
