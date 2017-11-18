@@ -1,0 +1,21 @@
+.reviews-overlay {
+    z-index: 15;
+    min-width: 320px;
+    position: fixed;
+    background: $dark;
+    top: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .5s, height .5s; // overflow: hidden;
+    &.reviews-overlay_open {
+        height: 100%;
+        opacity: .99;
+        visibility: visible;      
+    }    
+}
+

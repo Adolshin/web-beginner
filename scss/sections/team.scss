@@ -48,12 +48,19 @@
 .team-acco__item {
     margin-bottom: rem(30px);
     font-size: rem(14px);
+    &:last-child {
+        margin-bottom: 0; 
+    }
 }
 
 .team-acco__item_active {
     .team-acco__trigger {
         box-shadow: inset rgba(255, 255, 255, 0.2) -1px -1px 2px 1px, inset rgba(0, 0, 0, 0.6) 1px 1px 2px 1px;
         color: $yellow;
+        span {
+            display: block;
+            transform: translate(1px, 1px);
+        }
         &:before {
             transform: rotate(180deg);
         }
@@ -65,11 +72,17 @@
             opacity: 1;
             width: rem(100px);
             height: rem(100px);
+            @include tablets {               
+                margin-bottom: rem(10px);
+            }
         }
         .team-acco__text {
             opacity: 1;
             font-size: rem(14px);
             width: 70%;
+            .team-acco__text-title {
+                margin-bottom: rem(15px);
+            }
      @include tablets {
          width: 90%;
      }
@@ -130,7 +143,7 @@
     background-size: cover;
     @include tablets {
         margin-left: 0;
-        margin-bottom: rem(10px);
+      
     }
 }
 
@@ -153,7 +166,7 @@
 
 .team-acco__text-title {
     font-weight: 700;
-    margin-bottom: rem(15px);
+  
 }
 
 .team-acco__text-content {

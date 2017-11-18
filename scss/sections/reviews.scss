@@ -20,22 +20,65 @@
     &:hover {
         filter: grayscale(0);
         .comment {
-            transform: scale(1);
             background-color: rgba(#141414, .7);
             opacity: 1;
+            transition: opacity .4s;
             .comment__description {
-                transform: translate(0, 0) scale(1) rotate(0);
+                transition: transform .4s ease .4s;
+                transform: scale(1);
+            }
+        }
+    }
+    &.reviews__item_active {
+        filter: none;
+        .comment {
+            transition: none;
+            position: fixed;
+            z-index: 20;
+            top: 50%;
+            left: 50%;
+            transform: scale(1) translate(-50%, -50%);
+            width: rem(460px);
+            height: auto;
+            max-width: 90%;
+            border-radius: rem(10px);
+            background-color: #fff;
+            opacity: 0;
+            animation: fadeInOpacity 2s ease forwards;
+            animation-delay: .5s;
+            &:hover {
+                opacity: 0;
+            }
+            .comment__description {
+                transform: none;
+                color: $dark;
+                text-align: left;
+                .comment__title {
+                    text-align: left;
+                }
+                .comment__text {
+                    height: auto;
+                    margin-bottom: 0;
+                    @include phones {
+                        display: block;
+                    }
+                }
+                .comment__button {
+                    display: none;
+                }
+                .cross_reviews {
+                    display: block;
+                }
             }
         }
     }
 }
 
 .comment {
+    position: relative;
     height: 100%;
     width: 100%;
-    transition: all .3s;
     opacity: 0;
-    transform: scale(0);
 }
 
 .comment__description {
@@ -47,11 +90,10 @@
     justify-content: center;
     padding: rem(20px);
     color: #fff;
-    transform: translate(0, -50%) scale(0) rotate(-90deg);
-    transition: all .3s cubic-bezier(.4, -0.04, .58, 1.5) .3s;
+    transform: scale(0);
     @include tablets {
-        align-items: center;
         text-align: center;
+        align-items: center;
     }
 }
 
@@ -60,13 +102,9 @@
     font-family: 'gagalin';
     text-transform: uppercase;
     font-size: rem(14px);
-    margin-bottom: rem(30px);
+    margin-bottom: rem(20px);
     @include tablets {
         margin-bottom: rem(15px);
-        font-size: .7rem;
-    }
-    @include phones {           
-        font-size: 1.4rem;
     }
 }
 
@@ -75,35 +113,40 @@
     font-size: rem(14px);
     font-weight: 300;
     margin-bottom: rem(20px);
-    max-height: rem(150px);
+    height: rem(140px);
     overflow: hidden;
-    line-height: rem(24px);    
-    @include tablets {
-        font-size: .7rem;
-    }
-    @include phones {           
+    line-height: rem(24px);
+    @include phones {
         display: none;
     }
 }
 
 .comment__button {
+    display: block;
     position: relative;
     padding: rem(8px) rem(12px);
     background-color: $dark;
     border-radius: rem(5px);
-    transition: .5s;
+    transition: background-color .5s;
     color: #fff;
     text-decoration: none;
     font-size: rem(13px);
     text-transform: uppercase;
     font-weight: 500;
     line-height: 1;
-    box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;
-    // min-width: rem(120px);
-    @include phones {            
+    box-shadow: inset rgba(255, 255, 255, 0.3) 1px 1px 2px 1px, inset rgba(0, 0, 0, 0.7) -1.5px -1.5px 2px 1px;
+    span {
+        display: block;
+    }
+    &:active {
+        box-shadow: inset rgba(255, 255, 255, 0.3) -1px -1px 2px 1px, inset rgba(0, 0, 0, 1) 1.5px 1.5px 2px 1px;
+        span {
+            transform: translate(1px, 1px);
+        }
+    }
+    @include phones {
         min-width: rem(120px);
     }
-    
     &:after {
         content: "ЧИТАТЬ ОТЗЫВ";
         position: absolute;
@@ -116,9 +159,14 @@
         border-radius: rem(5px);
         white-space: nowrap;
         opacity: 0;
-        box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;      
-        @include phones {            
+        box-shadow: inset rgba(255, 255, 255, 0.3) 1px 1px 2px 1px, inset rgba(0, 0, 0, 0.7) -1.5px -1.5px 2px 1px;
+        @include phones {
             opacity: 1;
+        }
+    }
+    &:active {
+        &:after {
+            box-shadow: inset rgba(255, 255, 255, 0.3) -1px -1px 2px 1px, inset rgba(0, 0, 0, 1) 1.5px 1.5px 2px 1px;
         }
     }
     &:hover {
@@ -129,5 +177,14 @@
     }
     @include tablets {
         font-size: .7rem;
+    }
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

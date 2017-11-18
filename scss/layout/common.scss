@@ -8,8 +8,8 @@
   font-size: rem(13px);
   font-weight: 700;
   text-transform: uppercase;
-  transition: .5s;
-  box-shadow: inset rgba(255, 255, 255, 0.2) 2px 2px 4px 1px, inset rgba(0, 0, 0, 0.5) -2px -2px 4px 1px;
+  transition: background-color .5s;
+  box-shadow: inset rgba(255, 255, 255, 0.5) 1px 1px 2px 1px, inset rgba(0, 0, 0, 0.7) -1.5px -1.5px 2px 1px;
   &:hover {
     background-color: darken($orange, 12%);
   }
@@ -17,7 +17,7 @@
 
 .fixed-menu {
   position: fixed;
-  z-index: 20;
+  z-index: 10;
   right: 2%;
   top: rem(80px);
   @include tablets {
@@ -67,38 +67,55 @@
 
 .cross {
   position: absolute;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 22px;
-  width: 22px;
-  cursor: pointer;
-  // z-index: 100;
+  right: rem(20px);
+  top: rem(20px);
+  height: rem(22px);
+  width: rem(22px);
+  cursor: pointer; // z-index: 100;
   opacity: 0.7;
   @include phones {
-    display: flex;
+    display: block;
   }
   .cross__item {
+    position: absolute;
+    top: 50%;
     background: #fff;
     border: none;
     border-radius: 4px;
-    height: 4px;
-    width: 22px;
+    height: rem(4px);
+    width: rem(22px);
     transition: all .35s ease;
     cursor: pointer;
     &.cross__item_top {
-      transform: translateY(225%) translateX(0) rotate(45deg);
-      border-radius: 4px;
+      transform: translateY(-50%) rotate(45deg);
     }
     &.cross__item_bottom {
-      transform: translateY(-225%) translateX(0) rotate(-45deg);
-      border-radius: 4px;
+      transform: translateY(-50%) rotate(-45deg);
     }
   }
 }
 
 .cross_menu {
-  right: 20px;
-  top: 20px;
+  display: none;
+  @include phones {
+    display: block;
+  }
+}
+
+.cross_reviews {
+  display: none;
+  .cross__item {
+    background-color: red;
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
