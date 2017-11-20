@@ -67,7 +67,7 @@ body {
   width: 95%;
   max-width: 940px;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 auto;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,4 +132,13 @@ svg, a {
 }
 a {
   text-decoration: none;
+}
+.bx-wrapper {
+  margin-bottom: 0;
+  box-shadow: none;
+  border: none;
+  background: none;
+}
+.bx-viewport {
+  height: auto !important;
 }

@@ -169,6 +169,16 @@ svg, a {
 a {
   text-decoration: none; }
 
+.bx-wrapper {
+  margin-bottom: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: none; }
+
+.bx-viewport {
+  height: auto !important; }
+
 .order-btn {
   display: inline-block;
   padding: 0.625rem 0.9375rem;
@@ -889,19 +899,17 @@ a {
     transform: rotate(180deg); }
 
 .team-acco__item_active .team-acco__content {
-  -webkit-transition-delay: .3s;
-  -o-transition-delay: .3s;
-  transition-delay: .3s;
+  -webkit-transition-delay: .5s;
+  -o-transition-delay: .5s;
+  transition-delay: .5s;
   opacity: 1; }
   .team-acco__item_active .team-acco__content .team__img {
-    opacity: 1;
     width: 6.25rem;
     height: 6.25rem; }
     @media screen and (max-width: 768px) {
       .team-acco__item_active .team-acco__content .team__img {
         margin-bottom: 0.625rem; } }
   .team-acco__item_active .team-acco__content .team-acco__text {
-    opacity: 1;
     font-size: 0.875rem;
     width: 70%; }
     .team-acco__item_active .team-acco__content .team-acco__text .team-acco__text-title {
@@ -938,9 +946,9 @@ a {
     border-top-color: #f8b43a;
     border-width: 0.4375rem 0.28125rem 0 0.28125rem;
     margin-right: 0.625rem;
-    -webkit-transition: .7s;
-    -o-transition: .7s;
-    transition: .7s; }
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
   .team-acco__trigger:after {
     content: '';
     position: absolute;
@@ -957,9 +965,9 @@ a {
 
 .team-acco__content {
   opacity: 0;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -979,9 +987,9 @@ a {
 .team__img {
   width: 0;
   height: 0;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1001,9 +1009,9 @@ a {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   font-size: 0;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
   font-family: "ubuntu";
   color: #fff;
   margin-left: 0.9375rem; }
@@ -1584,15 +1592,17 @@ a {
   background: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 47%, #f9b43b 73%);
   background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 47%, #f9b43b 73%); }
 
-.burgers__content {
+.burgers__list {
+  height: 100%; }
+
+.burgers__item {
+  padding: 0 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  margin: 1.25rem 0;
-  width: 100%; }
+  display: flex; }
   @media screen and (max-width: 768px) {
-    .burgers__content {
+    .burgers__item {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
@@ -1603,12 +1613,9 @@ a {
       -ms-flex-align: center;
       align-items: center; } }
 
-.burgers__img,
-.burgers__description {
-  width: 50%; }
-
 .burgers__img {
-  height: 29.6875rem;
+  width: 50%;
+  height: 28.125rem;
   margin-right: 1.25rem;
   position: relative;
   display: -webkit-box;
@@ -1629,15 +1636,15 @@ a {
       -webkit-align-items: flex-end;
       -ms-flex-align: end;
       align-items: flex-end;
-      width: 60%;
-      height: 23.125rem;
-      margin-right: 0;
-      padding: 0 2%; } }
+      width: 80%;
+      height: 21.25rem;
+      margin-right: 0; } }
   @media screen and (max-width: 480px) {
     .burgers__img {
-      width: 90%; } }
+      width: 100%; } }
 
 .burgers__description {
+  width: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1657,7 +1664,11 @@ a {
       width: 100%; } }
 
 .burgers__img-pic {
-  width: 100%; }
+  max-width: 100%;
+  max-height: 65%; }
+  @media screen and (max-width: 768px) {
+    .burgers__img-pic {
+      max-height: 70%; } }
 
 .burgers__consist {
   -webkit-box-shadow: inset rgba(255, 255, 255, 0.3) 2px 2px 4px 2px, inset rgba(0, 0, 0, 0.4) -2px -2px 4px 1px;
@@ -1695,7 +1706,8 @@ a {
   background-color: #e25028;
   -webkit-box-shadow: inset rgba(255, 255, 255, 0.2) -2px -2px 4px 1px, inset rgba(0, 0, 0, 0.5) 2px 2px 4px 1px;
   box-shadow: inset rgba(255, 255, 255, 0.2) -2px -2px 4px 1px, inset rgba(0, 0, 0, 0.5) 2px 2px 4px 1px; }
-  .burgers__consist_active .burgers__consist-img, .burgers__consist_active .burgers__consist-title {
+  .burgers__consist_active .burgers__consist-img,
+  .burgers__consist_active .burgers__consist-title {
     -webkit-transform: translate(1px, 1px);
     -ms-transform: translate(1px, 1px);
     transform: translate(1px, 1px); }
@@ -1735,8 +1747,7 @@ a {
 
 .burgers__consist-popup_open {
   left: 5.625rem;
-  opacity: 1;
-  top: 0; }
+  opacity: 1; }
 
 .burgers__consist-popup-item {
   font-size: 0.875rem;
@@ -1804,15 +1815,21 @@ a {
   white-space: normal;
   line-height: 1;
   margin-bottom: 2.5rem; }
+  @media screen and (max-width: 768px) {
+    .section__title_burgers {
+      margin-bottom: 1.25rem; } }
   .section__title_burgers span {
     white-space: nowrap; }
 
 .burgers__text {
-  width: 90%;
+  width: 95%;
   color: #fff;
   font-weight: 300;
   margin-bottom: 1.875rem;
   font-size: 0.875rem; }
+  @media screen and (max-width: 768px) {
+    .burgers__text {
+      margin-bottom: 0.9375rem; } }
 
 .burgers__order {
   display: -webkit-box;
@@ -1839,19 +1856,27 @@ a {
 .burgers__order-price span {
   font-size: 1.875rem; }
 
-.arrow__img_left {
+.arrow_left {
   position: absolute;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  left: 3vw; }
+  top: 50%;
+  left: -1.5625rem; }
+  @media screen and (max-width: 768px) {
+    .arrow_left {
+      left: 0; } }
 
-.arrow__img_right {
+.arrow_right {
   position: absolute;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  right: 3vw; }
+  top: 50%;
+  right: -1.5625rem; }
+  @media screen and (max-width: 768px) {
+    .arrow_right {
+      right: 0; } }
 
 .hamburger-menu {
   position: relative;

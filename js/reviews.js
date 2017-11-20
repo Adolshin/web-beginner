@@ -1,6 +1,5 @@
 $('.comment__button').click(function(e) {
-    e.preventDefault();
-    
+    e.preventDefault();    
     $('.reviews-overlay').addClass('reviews-overlay_open');  
     $('body').addClass('body-active-menu');
     $(this).parents(".reviews__item").addClass("reviews__item_active");   
