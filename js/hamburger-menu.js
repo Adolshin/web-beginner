@@ -25,8 +25,14 @@
 // menu.init();
 
 
-$('#toggle').click(function() {
+$('.hamburger-menu').click(function() {
   $(this).toggleClass('hamburger-menu_active');
-  $('#overlay').toggleClass('overlay_open');
-  $('body').toggleClass('body-active-menu');
+  $('.overlay').toggleClass('overlay_open');
+  $('body').toggleClass('disabled-onepage-scroll');    
+});
+$('.overlay-menu__link').click(function(e){  
+  e.preventDefault();
+  $('.hamburger-menu').removeClass('hamburger-menu_active');
+  $('body').removeClass('disabled-onepage-scroll'); 
+  $('.overlay').removeClass('overlay_open');    
 });

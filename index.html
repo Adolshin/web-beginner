@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Бургерная</title>
     <link rel="stylesheet" href="./css/normalize.css">
+    
     <link rel="stylesheet" href="./css/jquery.bxslider.css">
-    <!-- <link rel="stylesheet" href="./css/owl.carousel.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.css"> -->
+  
+    <link rel="stylesheet" href="./css/onepage-scroll.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/OPSSettings.css">
 
     <script src="./js/svg4everybody.js"></script>
     <script>
@@ -33,30 +35,30 @@
                             <nav class="nav">
                                 <ul class="nav__list">
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">о нас</a>
+                                        <a href="#" class="nav__link page2">о нас</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">бургеры</a>
+                                        <a href="#" class="nav__link page3">бургеры</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">команда</a>
+                                        <a href="#" class="nav__link page4">команда</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">меню</a>
+                                        <a href="#" class="nav__link page5">меню</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">отзывы</a>
+                                        <a href="#" class="nav__link page6">отзывы</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">контакты</a>
+                                        <a href="#" class="nav__link page8">контакты</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="header__order">
-                            <a href="#" class="order-btn">заказать</a>
+                            <a href="#" class="order-btn page7"><span>заказать</span></a>
                         </div>
-                        <div class="hamburger-menu" id="toggle">
+                        <div class="hamburger-menu">
                             <div class="hamburger-menu__item hamburger-menu__item_top"></div>
                             <div class="hamburger-menu__item hamburger-menu__item_middle"></div>
                             <div class="hamburger-menu__item hamburger-menu__item_bottom"></div>
@@ -212,7 +214,7 @@
                                     <div class="burgers__order-price">500
                                         <span>рублей</span>
                                     </div>
-                                    <a href="#" class="order-btn">заказать</a>
+                                    <a href="#" class="order-btn page7"><span>заказать</span></a>
                                 </div>
                             </div>
                         </div>
@@ -301,7 +303,7 @@
                                     <div class="burgers__order-price">500
                                         <span>рублей</span>
                                     </div>
-                                    <a href="#" class="order-btn">заказать</a>
+                                    <a href="#" class="order-btn page7"><span>заказать</span></a>
                                 </div>
                             </div>
                         </div>
@@ -390,7 +392,7 @@
                                     <div class="burgers__order-price">500
                                         <span>рублей</span>
                                     </div>
-                                    <a href="#" class="order-btn">заказать</a>
+                                    <a href="#" class="order-btn page7"><span>заказать</span></a>
                                 </div>
                             </div>
                         </div>
@@ -479,7 +481,7 @@
                                     <div class="burgers__order-price">500
                                         <span>рублей</span>
                                     </div>
-                                    <a href="#" class="order-btn">заказать</a>
+                                    <a href="#" class="order-btn page7"><span>заказать</span></a>
                                 </div>
                             </div>
                         </div>
@@ -568,7 +570,7 @@
                                     <div class="burgers__order-price">500
                                         <span>рублей</span>
                                     </div>
-                                    <a href="#" class="order-btn">заказать</a>
+                                    <a href="#" class="order-btn page7"><span>заказать</span></a>
                                 </div>
                             </div>
                         </div>
@@ -584,8 +586,6 @@
                             </svg>
                         </a>
                 </div>
-           
-
             </section>
             <section class="section team">
                 <div class="team__container">
@@ -876,6 +876,8 @@
                         </div>
                     </li>
                 </ul>
+                <div class="reviews-overlay">
+                </div> 
             </section>
             <section class="section order">
                 <div class="container">
@@ -1004,74 +1006,75 @@
                     </div>
                 </footer>
             </section>
+            <div class="overlay">
+                <nav class="overlay-menu">
+                    <ul class="overlay-menu__list">
+                        <li class="overlay-menu__item">
+                            <a class="overlay-menu__link page2" href="#">о нас</a>
+                        </li>
+                        <li class="overlay-menu__item">
+                            <a class="overlay-menu__link page3" href="#">бургеры</a>
+                        </li>
+                        <li class="overlay-menu__item">
+                            <a class="overlay-menu__link page4" href="#">команда</a>
+                        </li>
+                        <li class="overlay-menu__item">
+                            <a class="overlay-menu__link page5" href="#">меню</a>
+                        </li>
+                        <li class="overlay-menu__item">
+                            <a class="overlay-menu__link page6" href="#">отзывы</a>
+                        </li>
+                        <li class="overlay-menu__item">
+                            <a class="overlay-menu__link page8" href="#">контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>           
+        </div>            
+    </div>
+    
+   
+    <ul class="fixed-menu">
+        <li class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link page1"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link page2"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link page3"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link page4"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link page5"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link page6"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link page7"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link page8"></a>
+        </li>
+    </ul>
+    <div class="order-overlay">
+        <div class="order-overlay__container">
+            <div class="order-overlay__text">
+                Сообщение отправлено
             </div>
-            <ul class="fixed-menu">
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="#" class="fixed-menu__link"></a>
-                </li>
-            </ul>
+            <a href="" class="order-btn order-btn_close">
+                <span>закрыть</span>
+            </a>
         </div>
-        <div class="overlay" id="overlay">
-            <nav class="overlay-menu">
-                <ul class="overlay-menu__list">
-                    <li class="overlay-menu__item">
-                        <a class="overlay-menu__link" href="#">о нас</a>
-                    </li>
-                    <li class="overlay-menu__item">
-                        <a class="overlay-menu__link" href="#">бургеры</a>
-                    </li>
-                    <li class="overlay-menu__item">
-                        <a class="overlay-menu__link" href="#">команда</a>
-                    </li>
-                    <li class="overlay-menu__item">
-                        <a class="overlay-menu__link" href="#">меню</a>
-                    </li>
-                    <li class="overlay-menu__item">
-                        <a class="overlay-menu__link" href="#">отзывы</a>
-                    </li>
-                    <li class="overlay-menu__item">
-                        <a class="overlay-menu__link" href="#">контакты</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="reviews-overlay">
-        </div>
-        <div class="order-overlay">
-            <div class="order-overlay__container">
-                <div class="order-overlay__text">
-                    Сообщение отправлено
-                </div>
-                <a href="" class="order-btn order-btn_close">
-                    <span>закрыть</span>
-                </a>
-            </div>
-
-        </div>
+    </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <!-- <script src="./js/owl.carousel.min.js"></script> -->
+        
+        <script src="./js/jquery.onepage-scroll.min.js"></script>
         <script src="./js/jquery.bxslider.min.js"></script>
+        <script src="./js/OPS.js"></script>       
         <script src="./js/slider.js"></script>
         <script src="./js/order.js"></script>
         <script src="./js/reviews.js"></script>

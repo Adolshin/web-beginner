@@ -1,7 +1,7 @@
 .reviews-overlay {
     z-index: 15;
     min-width: 320px;
-    position: fixed;
+    position: absolute;
     background: $dark;
     top: 0;
     width: 100%;

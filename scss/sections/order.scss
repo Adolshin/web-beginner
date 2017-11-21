@@ -130,7 +130,7 @@
     &:hover {
         cursor: pointer;
         .form__radio-img:after {
-            background: $dark;
+            background-color: $dark;
             transform: translate(-50%, -50%) scale(1);
         }
     }
@@ -142,7 +142,7 @@
     top: 0;
     left: rem(-9999px);
     &:checked+.form__radio-img:after {
-        background: $orange;
+        background-color: $orange;
         transform: translate(-50%, -50%) scale(1);
     }
 }

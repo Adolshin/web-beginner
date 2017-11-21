@@ -13,13 +13,22 @@
   &:hover {
     background-color: darken($orange, 12%);
   }
+  span {
+    display: block;
+  }
+  &:active {
+    box-shadow: inset rgba(255, 255, 255, 0.2) -1px -1px 2px 1px, inset rgba(0, 0, 0, 0.8) 1.5px 1.5px 2px 1px;
+    span {
+      transform: translate(1px, 1px);
+    }
+  }
 }
 
 .fixed-menu {
   position: fixed;
   z-index: 10;
-  right: 2%;
-  top: rem(80px);
+  right: 3%;
+  top: rem(100px);
   @include tablets {
     display: none;
   }
