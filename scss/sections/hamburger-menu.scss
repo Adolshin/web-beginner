@@ -53,7 +53,7 @@
     &.overlay_open {     
         opacity: .99;
         visibility: visible;
-        height: 100vh;
+        height: 100%;
         .overlay-menu__item {
             animation: fadeInRight .5s ease forwards;
             animation-delay: .35s;
