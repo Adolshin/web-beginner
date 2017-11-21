@@ -17,9 +17,9 @@ html {
   @include small {
     font-size: .75rem;
   }
-  @include mini {
-    font-size: .6rem;
-}
+//   @include mini {
+//     font-size: .6rem;
+// }
   // @include little {
   //   font-size: .65rem;
   // }
@@ -63,6 +63,18 @@ height: 100%;
   width: 100%;
 //  overflow: hidden;
    min-height: 650px;
+   @include phones {
+    min-height: 610px;
+  }
+  @include middle {
+    min-height: 600px;
+  }
+  @include small {
+    min-height: 540px;
+  }
+  @include little {
+    min-height: 500px;
+  }
 }
 
 
@@ -84,18 +96,17 @@ height: 100%;
   background-color: rgba(0, 0, 0, 0.31);
   min-height: 650px;
   @include phones {
-    min-height: 630px;
-  }
-  @include middle {
     min-height: 610px;
   }
+  @include middle {
+    min-height: 600px;
+  }
   @include small {
-    min-height: 560px;
+    min-height: 540px;
   }
   @include little {
-    min-height: 510px;
+    min-height: 500px;
   }
-
 }
 
 *,

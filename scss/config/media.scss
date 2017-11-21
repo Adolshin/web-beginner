@@ -40,10 +40,10 @@
       @content;
     }
   }
-  @mixin mini {
-    @media screen and (max-width: 280px) {
-      @content;
-    }
-  }
+  // @mixin mini {
+  //   @media screen and (max-width: 280px) {
+  //     @content;
+  //   }
+  // }
  
 
