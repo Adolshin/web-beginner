@@ -14,9 +14,9 @@ html {
   @include middle {
     font-size: .8rem;
   }
-  // @include small {
-  //   font-size: .7rem;
-  // }
+  @include small {
+    font-size: .7rem;
+  }
 //   @include mini {
 //     font-size: .6rem;
 // }
