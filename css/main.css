@@ -80,7 +80,7 @@ body {
   min-width: 320px; }
 
 .maincontent {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   min-height: 650px; }
   @media screen and (max-width: 480px) {
@@ -121,7 +121,7 @@ body {
   flex-direction: column; }
 
 .section {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   min-height: 650px; }
   @media screen and (max-width: 480px) {
