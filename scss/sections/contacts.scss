@@ -1,13 +1,20 @@
 .contacts {
-    background-image: url('../img/contacts/contacts-bg.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    // background-image: url('../img/contacts/contacts-bg.png');
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.contacts__map {
+    width: 100%;
+    flex: 1;
 }
 
 .footer {
-    position: absolute;
+    // position: absolute;
+    // z-index: 1;
     bottom: 0;
     width: 100%;
     // height: rem(58px);

@@ -9,14 +9,14 @@ html {
     font-size: .9rem;
   }
   @include phones {
-    font-size: .85rem;
+    font-size: .8rem;
   }
   @include middle {
     font-size: .8rem;
   }
-  @include small {
-    font-size: .75rem;
-  }
+  // @include small {
+  //   font-size: .7rem;
+  // }
 //   @include mini {
 //     font-size: .6rem;
 // }
@@ -26,7 +26,7 @@ html {
   // @include mini {
   //   font-size: .3rem;
   // }
-  overflow-y: hidden;
+  // overflow-y: hidden;
   
 } 
 
@@ -46,20 +46,20 @@ body {
   color: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }
 
 .wrapper {
   width: 100%; 
-height: 100%;
+// height: 100%;
   // position: relative;  
-  overflow: hidden;
+  // overflow: hidden;
   min-width: 320px;
   
 }
 
 .maincontent {
-  height: 100%;
+  height: 100vh;
   width: 100%;
 //  overflow: hidden;
    min-height: 650px;
@@ -91,9 +91,9 @@ height: 100%;
 }
 
 .section {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.31);
+  // background-color: rgba(0, 0, 0, 0.31);
   min-height: 650px;
   @include phones {
     min-height: 620px;

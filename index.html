@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Бургерная</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    
+   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPFiR3_5zKfctRwjFna05zSpA19I_2J7A"></script>
     <link rel="stylesheet" href="./css/jquery.bxslider.css">
   
     <link rel="stylesheet" href="./css/onepage-scroll.css">
@@ -962,6 +963,7 @@
                     </div>
             </section>
             <section class="section contacts">
+                <div class="contacts__map" id="map"></div>
                 <footer class="footer">
                     <div class="footer__container">
                         <adress class="adress">
@@ -1071,10 +1073,12 @@
         </div>
     </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        
-        <script src="./js/jquery.onepage-scroll.min.js"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPFiR3_5zKfctRwjFna05zSpA19I_2J7A&callback=initMap" async defer></script> -->
+        <script src="./js/jquery.onepage-scroll.js"></script>
+        <!-- <script src="./js/jquery.onepage-scroll.min.js"></script> -->
         <script src="./js/jquery.bxslider.min.js"></script>
-        <script src="./js/OPS.js"></script>       
+        <script src="./js/OPS.js"></script> 
+        <script src="./js/map.js"></script>      
         <script src="./js/slider.js"></script>
         <script src="./js/order.js"></script>
         <script src="./js/reviews.js"></script>

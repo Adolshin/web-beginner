@@ -12,8 +12,3 @@ $(document).ready(function () {
         slider.goToPrevSlide();
     });
 });
-// $(document).ready(function(){
-//     $(".owl-carousel").owlCarousel({
-//         items : 1
-//     });
-//   });
