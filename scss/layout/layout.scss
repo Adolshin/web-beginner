@@ -15,7 +15,7 @@ html {
     font-size: .8rem;
   }
   @include small {
-    font-size: .7rem;
+    font-size: .8rem;
   }
 //   @include mini {
 //     font-size: .6rem;
@@ -91,6 +91,7 @@ height: 100%;
 }
 
 .section {
+  
   height: 100%;
   width: 100%;
   // background-color: rgba(0, 0, 0, 0.31);

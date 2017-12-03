@@ -65,8 +65,11 @@
   text-decoration: none;
   transition: .3s;
   &:hover {
-    color: $yellow;
+    -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+    animation: neon4 1.5s ease-in-out infinite alternate;
   }
+  
 }
 
 .header__order {
@@ -130,18 +133,11 @@
   }
 }
 
-.section__title {
-  
-  white-space: nowrap;
-  text-align: left;
-  color: #f9b43b;
-  font-family: 'Gagalin';
-  font-size: rem(72px);
-  @include tablets {
-    line-height: 1;
-    text-align: center;
-    font-size: rem(62px);
-  }
+.section__title_hero {
+  text-shadow: 0px 4px 0px rgba(0,0,0,1),
+  0px 8px 6px rgba(0,0,0,1),
+  0px 18px 20px rgba(0,0,0,1),
+  0px 10px 70px rgba(255,255,255,1);
 }
 
 .hero__description-text {

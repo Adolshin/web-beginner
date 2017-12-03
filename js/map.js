@@ -41,7 +41,7 @@
             title: objects[i].str
         })
     }
-})()
+})();
 
 // var map;
 // var center = {lat: 59.939764, lng: 30.350236};

@@ -15,6 +15,7 @@ $phones: 480px;
 //config
 @import "./config/variables";
 @import "./config/mixins";
+@import "./config/animations";
 
 //base
 @import "./layout/fonts";
@@ -30,6 +31,9 @@ $phones: 480px;
 @import "./sections/order";
 @import "./sections/contacts";
 @import "./sections/burgers";
-@import "./sections/hamburger-menu";
-@import "./sections/reviews-overlay";
-@import "./sections/order-overlay";
+
+//blocks
+@import "./blocks/hamburger-menu";
+@import "./blocks/reviews-overlay";
+@import "./blocks/order-overlay";
+@import "./blocks/onepage-pagination";

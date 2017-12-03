@@ -12,9 +12,20 @@
     padding-top: rem(110px);
     color: #fff;
     transition: .8s;
+    text-shadow: 0px 5px 0px rgba(0,0,0,1),
+    0px 10px 5px rgba(0,0,0,1),
+    0px 18px 18px rgba(0,0,0,1),
+    0px 15px 40px rgba(255,255,255,1);
     @include large {
-        padding-left: rem(20px);
+        padding-left: rem(60px);
     }
+    @include phones {
+        padding-left: rem(30px);
+    }
+    @include small {
+        padding-left: rem(8px);
+    }
+
 }
 
 .menu__list {
@@ -49,16 +60,8 @@
 .menu__item_active {
     flex-grow: 1;
     .menu__trigger {
-        color: #fff; 
-        text-shadow: 0 0 .5px #fff,
-        0 0 1px #fff,
-        0 0 2px #fff,
-        0 0 3px #FFDD1B,
-        0 0 4px #FFDD1B,
-        0 0 5px #FFDD1B,
-        0 0 6px #FFDD1B,
-        0 0 9px #FFDD1B;
-        //   box-shadow: inset rgba(255, 255, 255, 0.3) 2px -2px 2px 1px, inset rgba(0, 0, 0, 0.8) -2px 2px 2px 1px; 
+        color: $yellow; 
+   
     }
     .menu__description-wrap {
         left: rem(80px);
@@ -124,8 +127,7 @@
             -moz-animation: neon3 1.5s ease-in-out infinite alternate;
             animation: neon3 1.5s ease-in-out infinite alternate; 
             color: #fff;
-            // animation: blur .75s ease-out infinite;
-            // text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+           
         } 
     }
 }
@@ -137,10 +139,10 @@
     white-space: nowrap;
     font-family: "gagalin";
     font-size: rem(40px);
-    color: $yellow;
+    color: #fff;
     position: relative;
     z-index: 2;
-    // text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15); // text-shadow: 4px 4px 4px black, -4px 4px 4px black;
+    
 }
 
 
@@ -167,77 +169,4 @@
     opacity: 0;
 }
 
-// @keyframes blur {
-//     from {
-//         text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #7B96B8, 0px 0px 150px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px -10px 100px #7B96B8, 0px -10px 100px #7B96B8;
-//     }
-// }
-// @keyframes neon1 {
-//     from {
-//       text-shadow: 0 0 10px #fff,
-//                  0 0 20px  #fff,
-//                  0 0 30px  #fff,
-//                  0 0 40px  #FF1177,
-//                  0 0 70px  #FF1177,
-//                  0 0 80px  #FF1177,
-//                  0 0 100px #FF1177,
-//                  0 0 150px #FF1177;
-//     }
-//     to {
-//       text-shadow: 0 0 5px #fff,
-//                  0 0 10px #fff,
-//                  0 0 15px #fff,
-//                  0 0 20px #FF1177,
-//                  0 0 35px #FF1177,
-//                  0 0 40px #FF1177,
-//                  0 0 50px #FF1177,
-//                  0 0 75px #FF1177;
-//     }
-//   }
-  
-//   @keyframes neon2 {
-//     from {
-//       text-shadow: 0 0 10px #fff,
-//                  0 0 20px  #fff,
-//                  0 0 30px  #fff,
-//                  0 0 40px  #228DFF,
-//                  0 0 70px  #228DFF,
-//                  0 0 80px  #228DFF,
-//                  0 0 100px #228DFF,
-//                  0 0 150px #228DFF;
-//     }
-//     to {
-//       text-shadow: 0 0 5px #fff,
-//                  0 0 10px #fff,
-//                  0 0 15px #fff,
-//                  0 0 20px #228DFF,
-//                  0 0 35px #228DFF,
-//                  0 0 40px #228DFF,
-//                  0 0 50px #228DFF,
-//                  0 0 75px #228DFF;
-//     }
-//   }
-  
-  @keyframes neon3 {
-    from {
-        text-shadow: 0 0 1px #fff,
-                   0 0 2px #fff,
-                   0 0 4px #fff,
-                   0 0 5px #FFDD1B,
-                   0 0 8px #FFDD1B,
-                   0 0 10px #FFDD1B,
-                   0 0 24px #FFDD1B,
-                   0 0 72px #FFDD1B;
-      }
-    to {
-      text-shadow: 0 0 .5px #fff,
-                 0 0 1px #fff,
-                 0 0 2px #fff,
-                 0 0 3px #FFDD1B,
-                 0 0 4px #FFDD1B,
-                 0 0 5px #FFDD1B,
-                 0 0 6px #FFDD1B,
-                 0 0 9px #FFDD1B;
-    }
-  }
-  
+

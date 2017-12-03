@@ -31,8 +31,18 @@
         height: 4px;
         width: 24px;
         transition: all .35s ease;
-        cursor: pointer;
-    }
+        cursor: pointer;       
+    } 
+    // &:hover {
+    //     -webkit-animation: neonbox 1.5s ease-in-out infinite alternate;
+    //     -moz-animation: neonbox 1.5s ease-in-out infinite alternate;
+    //     animation: neonbox 1.5s ease-in-out infinite alternate;
+    //     .hamburger-menu__item {
+    //         -webkit-animation: neonbox 1.5s ease-in-out infinite alternate;
+    //         -moz-animation: neonbox 1.5s ease-in-out infinite alternate;
+    //         animation: neonbox 1.5s ease-in-out infinite alternate;
+    //     }
+    // }
     @include tablets {
         display: flex;
     }
@@ -43,14 +53,26 @@
     min-width: 320px;
     position: absolute;
     background: $dark;
-    top: 0;    
+    top: 0;
     width: 100%;
     height: 0;
-    
     opacity: 0;
     visibility: hidden;
-    transition: opacity .35s, height .35s; 
-    &.overlay_open {     
+    transition: opacity .35s, height .35s;
+    min-height: 650px;
+    @include phones {
+        min-height: 620px;
+    }
+    @include middle {
+        min-height: 600px;
+    }
+    @include small {
+        min-height: 550px;
+    }
+    @include little {
+        min-height: 510px;
+    }
+    &.overlay_open {
         opacity: .99;
         visibility: visible;
         height: 100%;
@@ -65,15 +87,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;    
+    height: 100%;
     text-align: center;
 }
 
-
-.overlay-menu__item {  
+.overlay-menu__item {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     position: relative;
     line-height: 1;
     opacity: 0;
@@ -93,9 +114,9 @@
 
 .overlay-menu__link {
     display: block;
-    font-family: 'ubuntu'; 
-    font-weight: 500;   
-    color: #fff;    
+    font-family: 'ubuntu';
+    font-weight: 500;
+    color: #fff;
     text-transform: uppercase;
     font-size: rem(24px);
     transition: .3s;

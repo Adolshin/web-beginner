@@ -18,4 +18,4 @@ accomenu.addEventListener('click', function (event) {
             target.classList.add('menu__item_active')
         }
     }
-})
+});

@@ -18,4 +18,4 @@ if (target.classList.contains('team-acco__item_active')) {
         target.classList.add('team-acco__item_active')
     }
 }
-})
+});
